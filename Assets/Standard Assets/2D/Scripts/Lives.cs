@@ -1,22 +1,70 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class Lives : MonoBehaviour
 {
+
+    public GameObject Gameover;
+    public GameObject Enviorment;
     public static float life;
     private Rigidbody2D rb;
     public float flashSpeed;
-  
+    
+
     SpriteRenderer spRndrer;
 
     void Start()
     {
-
+        Gameover.SetActive(false);
+        Enviorment.SetActive(true);
+        
         rb = gameObject.GetComponent<Rigidbody2D>();
         spRndrer = GetComponent<SpriteRenderer>();
         life = 4;
+        Cursor.visible = false;
+        
+
+
+    }
+
+    void Update()
+    {
+        if (life == 3)
+        {
+            Debug.Log("life is now 3");
+            Destroy(GameObject.Find("Life4"));
+
+        }
+
+
+        if (life == 2)
+        {
+            Debug.Log("life is now 2");
+            Destroy(GameObject.Find("Life3"));
+
+        }
+
+
+        if (life == 1)
+        {
+            Debug.Log("life is now 1");
+            Destroy(GameObject.Find("Life2"));
+
+        }
+
+        if (life == 0)
+        {
+            Destroy(GameObject.Find("Life1"));
+            Debug.Log("GameOver");
+            Cursor.visible = true;
+            Gameover.SetActive(true);
+            Enviorment.SetActive(false);
+
+
+        }
+
 
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -46,7 +94,7 @@ public class Lives : MonoBehaviour
         if (other.tag == "Boost")
         {
             Debug.Log("boost");
-            rb.AddForce(Vector3.up * 630f);
+            rb.AddForce(Vector3.up * 930f);
         }
 
     }
@@ -64,4 +112,6 @@ public class Lives : MonoBehaviour
         }
        
     }
+
+    
 }
