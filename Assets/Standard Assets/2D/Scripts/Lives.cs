@@ -23,11 +23,24 @@ public class Lives : MonoBehaviour
             life--;
             Debug.Log(life);
             transform.position = new Vector3(-6, 2, 0);
-
-
-
+ }
+        if (other.tag == "Hazard")
+        {
+            life --;
+            StartCoroutine(Flasher);
         }
 
+    }
 
+
+    IEnumerator Flasher()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            renderer.material.color = collideColor;
+            yield return new WaitForSeconds(.1f);
+            renderer.material.color = normalColor;
+            yield return new WaitForSeconds(.1f);
+        }
     }
 }
