@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Lives : MonoBehaviour
 {
     public static float life;
 
-
-
+    public float flashSpeed;
+  
+    SpriteRenderer spRndrer;
 
     void Start()
     {
 
+      
+        spRndrer = GetComponent<SpriteRenderer>();
         life = 4;
 
     }
@@ -23,24 +27,35 @@ public class Lives : MonoBehaviour
             life--;
             Debug.Log(life);
             transform.position = new Vector3(-6, 2, 0);
- }
+            StartCoroutine(Flash(flashSpeed));
+        }
         if (other.tag == "Hazard")
         {
+            Debug.Log("hit hazard");
             life --;
-            StartCoroutine(Flasher);
+            StartCoroutine(Flash(flashSpeed));
+        }
+
+        if (other.tag == "Spike")
+        {
+            Debug.Log("hit spike");
+            life--;
+            StartCoroutine(Flash(flashSpeed));
         }
 
     }
 
 
-    IEnumerator Flasher()
+    IEnumerator Flash(float x)
     {
-        for (int i = 0; i < 5; i++)
+        
+        for (int i = 0; i < 10; i++)
         {
-            renderer.material.color = collideColor;
-            yield return new WaitForSeconds(.1f);
-            renderer.material.color = normalColor;
-            yield return new WaitForSeconds(.1f);
+            spRndrer.enabled = false;
+            yield return new WaitForSeconds(x);
+            spRndrer.enabled = true;
+            yield return new WaitForSeconds(x);
         }
+       
     }
 }

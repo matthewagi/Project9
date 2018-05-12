@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New Unity Project (9).Plugins", "New Unity Project (9).Plugins.csproj", "{3504DAF4-DF61-DB37-8F0A-4B40A0BD9347}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New Unity Project (9)", "New Unity Project (9).csproj", "{0AB8EB9B-9C5E-FDEF-73B6-93EB8F011977}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New Unity Project (9).Editor.Plugins", "New Unity Project (9).Editor.Plugins.csproj", "{70849FE4-DF8B-86F2-8FA1-86EDEADCC2D1}"
 EndProject
 Global
@@ -15,6 +17,10 @@ Global
 		{3504DAF4-DF61-DB37-8F0A-4B40A0BD9347}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3504DAF4-DF61-DB37-8F0A-4B40A0BD9347}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3504DAF4-DF61-DB37-8F0A-4B40A0BD9347}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AB8EB9B-9C5E-FDEF-73B6-93EB8F011977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AB8EB9B-9C5E-FDEF-73B6-93EB8F011977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AB8EB9B-9C5E-FDEF-73B6-93EB8F011977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AB8EB9B-9C5E-FDEF-73B6-93EB8F011977}.Release|Any CPU.Build.0 = Release|Any CPU
 		{70849FE4-DF8B-86F2-8FA1-86EDEADCC2D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{70849FE4-DF8B-86F2-8FA1-86EDEADCC2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70849FE4-DF8B-86F2-8FA1-86EDEADCC2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
