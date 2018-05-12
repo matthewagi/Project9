@@ -6,7 +6,7 @@ using UnityEngine;
 public class Lives : MonoBehaviour
 {
     public static float life;
-
+    private Rigidbody2D rb;
     public float flashSpeed;
   
     SpriteRenderer spRndrer;
@@ -14,7 +14,7 @@ public class Lives : MonoBehaviour
     void Start()
     {
 
-      
+        rb = gameObject.GetComponent<Rigidbody2D>();
         spRndrer = GetComponent<SpriteRenderer>();
         life = 4;
 
@@ -41,6 +41,12 @@ public class Lives : MonoBehaviour
             Debug.Log("hit spike");
             life--;
             StartCoroutine(Flash(flashSpeed));
+        }
+
+        if (other.tag == "Boost")
+        {
+            Debug.Log("boost");
+            rb.AddForce(Vector3.up * 630f);
         }
 
     }
