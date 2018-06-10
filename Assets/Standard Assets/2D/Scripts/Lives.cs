@@ -2,29 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Lives : MonoBehaviour
 {
 
     public GameObject Gameover;
     public GameObject Enviorment;
+    public GameObject Character;
+
     public static float life;
     private Rigidbody2D rb;
     public float flashSpeed;
-    
+
+
+
+
 
     SpriteRenderer spRndrer;
 
     void Start()
     {
+
         Gameover.SetActive(false);
         Enviorment.SetActive(true);
-        
+        Character.SetActive(true);
+
         rb = gameObject.GetComponent<Rigidbody2D>();
         spRndrer = GetComponent<SpriteRenderer>();
         life = 4;
         Cursor.visible = false;
-        
+     
+
 
 
     }
@@ -61,6 +71,7 @@ public class Lives : MonoBehaviour
             Cursor.visible = true;
             Gameover.SetActive(true);
             Enviorment.SetActive(false);
+            Character.SetActive(false);
 
 
         }
@@ -96,6 +107,13 @@ public class Lives : MonoBehaviour
             Debug.Log("boost");
             rb.AddForce(Vector3.up * 930f);
         }
+
+        if(other.tag == "Level2")
+        {
+            SceneManager.LoadScene("Level2");
+        }
+
+        
 
     }
 

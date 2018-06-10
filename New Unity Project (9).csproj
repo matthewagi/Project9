@@ -245,6 +245,8 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\enableparticle.cs" />
+    <Compile Include="Assets\exitgame.cs" />
     <Compile Include="Assets\menuscript.cs" />
   </ItemGroup>
   <ItemGroup>

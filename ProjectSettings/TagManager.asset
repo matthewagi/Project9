@@ -8,6 +8,14 @@ TagManager:
   - Hazard
   - Spike
   - Boost
+  - Level
+  - Level2
+  - trap
+  - Score
+  - Trap2
+  - Trap3
+  - LevelEnd
+  - particleactivator
   layers:
   - Default
   - TransparentFX
