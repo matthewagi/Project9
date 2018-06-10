@@ -240,18 +240,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\enableparticle.cs" />
     <Compile Include="Assets\exitgame.cs" />
     <Compile Include="Assets\menuscript.cs" />
+    <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Lives.cs" />
+    <Compile Include="Assets\Scripts\LivesLV2.cs" />
+    <Compile Include="Assets\Scripts\Platformer2DUserControl.cs" />
+    <Compile Include="Assets\Scripts\PlatformerCharacter2D.cs" />
+    <Compile Include="Assets\Scripts\Restarter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Standard Assets\Effects\Bloom\Resources\Bloom.cginc" />
     <None Include="Assets\Standard Assets\Effects\Bloom\Resources\Bloom.shader" />
     <None Include="Assets\Standard Assets\Effects\LensAberrations\Resources\LensAberrations.shader" />

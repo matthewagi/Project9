@@ -16,6 +16,7 @@ TagManager:
   - Trap3
   - LevelEnd
   - particleactivator
+  - end
   layers:
   - Default
   - TransparentFX

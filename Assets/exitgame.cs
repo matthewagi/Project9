@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 public class exitgame : MonoBehaviour {
 
 	// Use this for initialization
@@ -10,10 +10,10 @@ public class exitgame : MonoBehaviour {
 	// Update is called once per frame
 	public void QuitGame() {
 
-       
-   
-            Application.Quit();
-            Debug.Log("Game is exiting");
+
+        Debug.Log("Game is exiting");
+        Application.Quit();
+           
             //Just to make sure its working
         }
 
